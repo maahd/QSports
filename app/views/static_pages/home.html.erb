@@ -1,0 +1,33 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<% if signed_in? %>
+
+<!-- <div class="center hero-unit">
+<h1><%= current_user.name %></h1>
+	<% if current_user.admin? %>
+			<h3>Administrative Tools</h3>
+			<br></br>
+			<%= link_to "Managers", users_path, class: "btn btn-large btn-primary" %>
+			<%= link_to "Bands", bands_path, class: "btn btn-large btn-primary" %>
+			<%= link_to "Genres", genres_path, class: "btn btn-large btn-primary" %>
+			<br></br>
+			<%= link_to "New Band", newband_path, class: "btn btn-large btn-primary" %>
+			<%= link_to "New Genre", newgenre_path, class: "btn btn-large btn-primary" %>
+	<% else %>
+			<h3>Manager Tools</h3>
+			<br></br>
+			<%= link_to "My Bands", bands_path, class: "btn btn-large btn-primary" %>
+			<%= link_to "New Band", newband_path, class: "btn btn-large btn-primary" %>
+	<% end %>
+</div> -->
+
+<% else %>
+<div class="center hero-unit">
+	<h1>Welcome to QSPORTS</h1>
+	<p>Register now!</p>
+	<%= link_to "Sign Up", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<%end%>
